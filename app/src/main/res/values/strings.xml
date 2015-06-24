@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">CongCuSo.Net</string>
+    <string name="action_calendar">Calendar</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="nav_item_one">Xổ số Miền Bắc</string>
+    <string name="nav_item_two">Xổ số Miền Trung</string>
+    <string name="nav_item_three">Xổ số Miền Nam</string>
+    <string name="nav_item_four">Số Lộc</string>
+    <string name="nav_item_fire">Lịch mở thưởng</string>
+    <string name="nav_item_six">Kho tiện ích</string>
+    <string name="nav_item_seven">Cài đặt</string>
+    <string name="nav_item_eight">Đánh giá</string>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_one</item>
+        <item>@string/nav_item_two</item>
+        <item>@string/nav_item_three</item>
+        <item>@string/nav_item_four</item>
+        <item>@string/nav_item_fire</item>
+        <item>@string/nav_item_six</item>
+        <item>@string/nav_item_seven</item>
+        <item>@string/nav_item_eight</item>
+    </string-array>
+
+    <string name="title_messages">Messages</string>
+    <string name="title_friends">Friends</string>
+    <string name="title_home">Home</string>
+</resources>
