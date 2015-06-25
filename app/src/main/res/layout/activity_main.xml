@@ -5,18 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!--<LinearLayout
-        android:id="@+id/container_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <include
-            android:id="@+id/toolbar"
-            layout="@layout/toolbar" />
-
-    </LinearLayout>-->
-
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
@@ -49,7 +37,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|bottom"
-                android:background="#ffff5d07"
+                android:background="@color/colorBacground"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp">
 
@@ -61,8 +49,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
+                        android:layout_width="@dimen/image_w"
+                        android:layout_height="@dimen/image_h"
                         android:src="@mipmap/navbar_icon_kqxs" />
 
                     <TextView
@@ -70,7 +58,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/title_xsmb"
                         android:textColor="#fff"
-                        android:textSize="12sp" />
+                        android:textSize="@dimen/title_nav_bottom" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -81,8 +69,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
+                        android:layout_width="@dimen/image_w"
+                        android:layout_height="@dimen/image_h"
                         android:src="@mipmap/navbar_icon_kqxs" />
 
                     <TextView
@@ -90,7 +78,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/title_xsmt"
                         android:textColor="#fff"
-                        android:textSize="12sp" />
+                        android:textSize="@dimen/title_nav_bottom" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -101,8 +89,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
+                        android:layout_width="@dimen/image_w"
+                        android:layout_height="@dimen/image_h"
                         android:src="@mipmap/navbar_icon_kqxs" />
 
                     <TextView
@@ -110,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/title_xsmn"
                         android:textColor="#fff"
-                        android:textSize="12sp" />
+                        android:textSize="@dimen/title_nav_bottom" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -121,8 +109,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
+                        android:layout_width="@dimen/image_w"
+                        android:layout_height="@dimen/image_h"
                         android:src="@mipmap/navbar_icon_mobat" />
 
                     <TextView
@@ -130,7 +118,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/title_soloc"
                         android:textColor="#fff"
-                        android:textSize="12sp" />
+                        android:textSize="@dimen/title_nav_bottom" />
                 </LinearLayout>
 
 
