@@ -25,7 +25,8 @@
         <item>@string/nav_item_rate</item>
     </string-array>
 
-    <string name="title_messages">Messages</string>
-    <string name="title_friends">Friends</string>
-    <string name="title_home">Home</string>
+    <string name="title_xsmb">Miền Bắc</string>
+    <string name="title_xsmt">Miền Trung</string>
+    <string name="title_xsmn">Miền Nam</string>
+    <string name="title_soloc">Số Lộc</string>
 </resources>
