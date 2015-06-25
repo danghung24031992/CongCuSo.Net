@@ -72,17 +72,38 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
         String title = getString(R.string.app_name);
         switch (position) {
             case 0:
-                fragment = new HomeFragment();
-                title = getString(R.string.nav_item_one);
+                fragment = new XSMBFragment();
+                title = getString(R.string.nav_item_xsmb);
                 break;
             case 1:
-                fragment = new FriendsFragment();
-                title = getString(R.string.nav_item_two);
+                fragment = new XSMTFragment();
+                title = getString(R.string.nav_item_xsmt);
                 break;
             case 2:
-                fragment = new MessagesFragment();
-                title = getString(R.string.nav_item_three);
+                fragment = new XSMNFragment();
+                title = getString(R.string.nav_item_xsmn);
                 break;
+            case 3:
+                fragment = new SoLocFragment();
+                title = getString(R.string.nav_item_so_loc);
+                break;
+            case 4:
+                fragment = new CalendarFragment();
+                title = getString(R.string.nav_item_calendar);
+                break;
+            case 5:
+                fragment = new TienIchFragment();
+                title = getString(R.string.nav_item_tien_ich);
+                break;
+            case 6:
+                fragment = new SetUpFragment();
+                title = getString(R.string.nav_item_setup);
+                break;
+            case 7:
+                fragment = new RateFragment();
+                title = getString(R.string.nav_item_rate);
+                break;
+
             default:
                 break;
         }

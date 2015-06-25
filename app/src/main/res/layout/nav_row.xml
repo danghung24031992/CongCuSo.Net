@@ -17,5 +17,5 @@
         android:textSize="18sp"
         android:layout_marginLeft="5dp"
         android:textColor="@android:color/white"
-        android:text="@string/nav_item_six"/>
+        android:text="@string/nav_item_calendar"/>
 </LinearLayout>
