@@ -14,4 +14,18 @@
         <item name="android:windowBackground">@color/windowBackground</item>
     </style>
 
+    <style name="MyText">
+
+        <item name="android:layout_width">@dimen/text_w</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorBacground</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+    <style name="MyText.Right">
+        <item name="android:textColor">@color/abc_primary_text_disable_only_material_light</item>
+        <item name="android:layout_weight">2</item>
+    </style>
+
 </resources>
