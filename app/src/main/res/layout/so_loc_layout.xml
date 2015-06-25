@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:background="#f2f0f1"
+            android:layout_width="0dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10dp"
+            android:textColor="@color/abc_primary_text_disable_only_material_light"
+            android:textStyle="bold"
+            android:text="Miền Bắc"
+            android:textSize="16sp" />
+
+        <TextView
+            android:background="#f2f0f1"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:paddingRight="10dp"
+            android:text="25/06/2015"
+            android:textColor="#8e8e8e" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/MyText.Right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:paddingLeft="10dp"
+            android:text="Loto ngày"
+            android:textSize="@dimen/title_nav"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/MyText.Right"
+                android:background="@drawable/border_loto"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:text="99" />
+
+            <TextView
+                style="@style/MyText.Right"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/border_loto"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="99" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/MyText.Right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:paddingLeft="10dp"
+            android:text="Đặc biệt"
+            android:textSize="@dimen/title_nav"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/MyText.Right"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/border_loto"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="99" />
+
+            <TextView
+                style="@style/MyText.Right"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/border_loto"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="99" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/MyText.Right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:textStyle="normal"
+            android:paddingLeft="10dp"
+            android:text="Cặp số đặc biệt"
+            android:textSize="@dimen/title_nav" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/MyText.Right"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/border_loto"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="99" />
+
+            <TextView
+                style="@style/MyText.Right"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/border_loto"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="99" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -15,8 +15,10 @@
     </style>
 
     <style name="MyText">
-
+        <item name="android:background">@drawable/boder_xs</item>
         <item name="android:layout_width">@dimen/text_w</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:gravity">center</item>
         <item name="android:textStyle">bold</item>
@@ -26,6 +28,26 @@
     <style name="MyText.Right">
         <item name="android:textColor">@color/abc_primary_text_disable_only_material_light</item>
         <item name="android:layout_weight">2</item>
+    </style>
+    <style name="MyText.Head">
+        <item name="android:background">@drawable/boder_xs_gray</item>
+    </style>
+    <style name="MyText.Right.Head">
+        <item name="android:background">@drawable/boder_xs_gray</item>
+    </style>
+
+
+    <style name="MyTextXS">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingLeft">5dp</item>
+
+    </style>
+    <style name="MyTextXS.Center">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/abc_primary_text_disable_only_material_light</item>
     </style>
 
 </resources>

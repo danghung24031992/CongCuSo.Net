@@ -1,559 +1,628 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="@dimen/padding">
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@mipmap/calendar_icon_select" />
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:paddingLeft="5dp"
-            android:text="Ngày 24/06/2015"
-            android:textColor="@color/abc_primary_text_disable_only_material_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-
-    <TableLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:shrinkColumns="*"
-        android:stretchColumns="*">
-
-        <TableRow>
-
-            <TextView
-                android:layout_column="0"
-                android:text="Đặc biệt" />
-
-            <TextView
-                android:layout_span="4"
-                android:gravity="center"
-                android:text="36770"
-                android:textColor="@color/abc_primary_text_disable_only_material_light" />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView android:text="Giải nhất" />
-
-            <TextView
-                android:layout_span="4"
-                android:gravity="center"
-                android:text="36770"
-                android:textColor="@color/abc_primary_text_disable_only_material_light" />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView android:text="Giải nhì" />
-
-            <TextView
-                android:layout_span="2"
-                android:gravity="center"
-                android:text="36770"
-                android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-            <TextView
-                android:layout_span="2"
-                android:gravity="center"
-                android:text="367701"
-                android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-
-        </TableRow>
-
-        <TableRow android:gravity="center">
-
-            <TextView android:text="Giải ba" />
-
-
-            <TableLayout
-                android:layout_width="fill_parent"
-                android:layout_span="4"
-                android:stretchColumns="*">
-
-                <TableRow android:layout_width="fill_parent">
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                </TableRow>
-
-                <TableRow android:layout_width="fill_parent">
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                </TableRow>
-            </TableLayout>
-        </TableRow>
-
-        <TableRow>
-
-            <TextView android:text="Giải tư" />
-
-            <TextView
-                android:gravity="center"
-                android:text="36770"
-                android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-            <TextView
-                android:gravity="center"
-                android:text="367701"
-                android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-            <TextView
-                android:gravity="center"
-                android:text="36770"
-                android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-            <TextView
-                android:gravity="center"
-                android:text="367701"
-                android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-        </TableRow>
-
-        <TableRow android:gravity="center">
-
-            <TextView android:text="Giải năm" />
-
-
-            <TableLayout
-                android:layout_width="fill_parent"
-                android:layout_span="4"
-                android:stretchColumns="*">
-
-                <TableRow android:layout_width="fill_parent">
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                </TableRow>
-
-                <TableRow android:layout_width="fill_parent">
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                </TableRow>
-            </TableLayout>
-        </TableRow>
-
-        <TableRow android:gravity="center">
-
-            <TextView android:text="Giải sáu" />
-
-
-            <TableLayout
-                android:layout_width="fill_parent"
-                android:layout_span="4"
-                android:stretchColumns="*">
-
-                <TableRow android:layout_width="fill_parent">
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                </TableRow>
-            </TableLayout>
-        </TableRow>
-
-        <TableRow android:gravity="center">
-
-            <TextView android:text="Giải bảy" />
-
-
-            <TableLayout
-                android:layout_width="fill_parent"
-                android:layout_span="4"
-                android:stretchColumns="*">
-
-                <TableRow android:layout_width="fill_parent">
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="36770"
-                        android:textColor="@color/abc_primary_text_disable_only_material_light" />
-
-                </TableRow>
-            </TableLayout>
-        </TableRow>
-    </TableLayout>
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:padding="@dimen/padding">
 
-        <TableLayout
+
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@mipmap/calendar_icon_select" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:paddingLeft="5dp"
+                android:text="Ngày 24/06/2015"
+                android:textColor="@color/abc_primary_text_disable_only_material_light"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <TableLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boder_xs"
             android:shrinkColumns="*"
             android:stretchColumns="*">
 
-            <TableRow>
+            <TableRow >
 
                 <TextView
-                    style="@style/MyText"
-                    android:text="Đầu" />
+                    android:background="@drawable/boder_xs"
+                    style="@style/MyTextXS"
+                    android:text="Đặc biệt" />
 
                 <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đuôi" />
+                    android:background="@drawable/boder_xs"
+                    style="@style/MyTextXS.Center"
+                    android:layout_span="4"
+                    android:text="36770" />
+            </TableRow>
+
+            <TableRow android:background="@drawable/boder_xs_gray">
+
+                <TextView
+                    android:background="@drawable/boder_xs_gray"
+                    style="@style/MyTextXS"
+                    android:text="Giải nhất" />
+
+                <TextView
+                    android:background="@drawable/boder_xs_gray"
+                    style="@style/MyTextXS.Center"
+                    android:layout_span="4"
+                    android:text="36770" />
             </TableRow>
 
             <TableRow>
 
                 <TextView
-                    style="@style/MyText"
-                    android:text="0" />
+                    android:background="@drawable/boder_xs"
+                    style="@style/MyTextXS"
+                    android:text="Giải nhì" />
 
                 <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đuôi" />
+                    android:background="@drawable/boder_xs"
+                    style="@style/MyTextXS.Center"
+                    android:layout_span="2"
+                    android:text="36770" />
+
+                <TextView
+                    android:background="@drawable/boder_xs"
+                    style="@style/MyTextXS.Center"
+                    android:layout_span="2"
+                    android:text="367701" />
+
+
             </TableRow>
 
-            <TableRow>
+            <TableRow android:gravity="center" android:background="@drawable/boder_xs_gray">
 
                 <TextView
-                    style="@style/MyText"
-                    android:text="1" />
+                    android:background="@drawable/boder_xs_gray"
+                    style="@style/MyTextXS"
+                    android:layout_height="fill_parent"
+                    android:text="Giải ba" />
 
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đuôi" />
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_span="4"
+                    android:stretchColumns="*">
+
+                    <TableRow android:layout_width="fill_parent">
+
+                        <TextView
+                            android:background="@drawable/boder_xs_gray"
+                            android:layout_weight="1"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:gravity="center"
+                            android:text="36770"
+                            android:textColor="@color/abc_primary_text_disable_only_material_light" />
+
+                        <TextView
+                            android:background="@drawable/boder_xs_gray"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="36770"
+                            android:textColor="@color/abc_primary_text_disable_only_material_light" />
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/boder_xs_gray"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="36770"
+                            android:textColor="@color/abc_primary_text_disable_only_material_light" />
+
+                    </TableRow>
+                    <TableRow android:layout_width="fill_parent">
+
+                        <TextView
+                            android:background="@drawable/boder_xs_gray"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="36770"
+                            android:textColor="@color/abc_primary_text_disable_only_material_light" />
+
+                        <TextView
+                            android:background="@drawable/boder_xs_gray"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="36770"
+                            android:textColor="@color/abc_primary_text_disable_only_material_light" />
+
+                        <TextView
+                            android:background="@drawable/boder_xs_gray"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="36770"
+                            android:textColor="@color/abc_primary_text_disable_only_material_light" />
+
+                    </TableRow>
+                </TableLayout>
             </TableRow>
 
-            <TableRow>
+            <TableRow >
 
                 <TextView
-                    style="@style/MyText"
-                    android:text="2" />
+                    android:background="@drawable/boder_xs"
+                    style="@style/MyTextXS"
+                    android:text="Giải tư" />
 
                 <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đuôi" />
+                    android:background="@drawable/boder_xs"
+                    style="@style/MyTextXS.Center"
+                    android:text="36770" />
+
+                <TextView
+                    android:background="@drawable/boder_xs"
+                    style="@style/MyTextXS.Center"
+                    android:text="36770" />
+
+                <TextView
+                    android:background="@drawable/boder_xs"
+                    style="@style/MyTextXS.Center"
+                    android:text="36770" />
+
+                <TextView
+                    android:background="@drawable/boder_xs"
+                    style="@style/MyTextXS.Center"
+                    android:text="36770" />
+
             </TableRow>
 
-            <TableRow>
+            <TableRow android:gravity="center" android:background="@drawable/boder_xs_gray">
 
                 <TextView
-                    style="@style/MyText"
-                    android:text="3" />
+                    android:background="@drawable/boder_xs_gray"
+                    style="@style/MyTextXS"
+                    android:layout_height="fill_parent"
+                    android:text="Giải năm" />
 
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đuôi" />
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_span="4"
+                    android:stretchColumns="*">
+
+                    <TableRow android:layout_width="fill_parent">
+
+                        <TextView
+                            android:background="@drawable/boder_xs_gray"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="36770"
+                            android:textColor="@color/abc_primary_text_disable_only_material_light" />
+
+                        <TextView
+                            android:background="@drawable/boder_xs_gray"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="36770"
+                            android:textColor="@color/abc_primary_text_disable_only_material_light" />
+
+                        <TextView
+                            android:background="@drawable/boder_xs_gray"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="36770"
+                            android:textColor="@color/abc_primary_text_disable_only_material_light" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_width="fill_parent">
+
+                        <TextView
+                            android:background="@drawable/boder_xs_gray"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="36770"
+                            android:textColor="@color/abc_primary_text_disable_only_material_light" />
+
+                        <TextView
+                            android:background="@drawable/boder_xs_gray"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="36770"
+                            android:textColor="@color/abc_primary_text_disable_only_material_light" />
+
+                        <TextView
+                            android:background="@drawable/boder_xs_gray"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="36770"
+                            android:textColor="@color/abc_primary_text_disable_only_material_light" />
+
+                    </TableRow>
+                </TableLayout>
             </TableRow>
 
-            <TableRow>
+            <TableRow
+                android:gravity="center">
 
                 <TextView
-                    style="@style/MyText"
-                    android:text="4" />
+                    android:background="@drawable/boder_xs"
+                    style="@style/MyTextXS"
+                    android:text="Giải sáu" />
 
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đuôi" />
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_span="4"
+                    android:stretchColumns="*">
+
+                    <TableRow android:layout_width="fill_parent">
+
+                        <TextView
+                            android:background="@drawable/boder_xs"
+                            style="@style/MyTextXS.Center"
+                            android:layout_weight="1"
+                            android:text="36770" />
+
+                        <TextView
+                            android:background="@drawable/boder_xs"
+                            style="@style/MyTextXS.Center"
+                            android:layout_weight="1"
+                            android:text="36770" />
+
+                        <TextView
+                            android:background="@drawable/boder_xs"
+                            style="@style/MyTextXS.Center"
+                            android:layout_weight="1"
+                            android:text="36770" />
+
+                    </TableRow>
+                </TableLayout>
             </TableRow>
 
-            <TableRow>
+            <TableRow android:gravity="center" android:background="@drawable/boder_xs_gray">
 
                 <TextView
-                    style="@style/MyText"
-                    android:text="5" />
+                    android:background="@drawable/boder_xs_gray"
+                    style="@style/MyTextXS"
+                    android:text="Giải bảy" />
 
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đuôi" />
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_span="4"
+                    android:stretchColumns="*">
+
+                    <TableRow android:layout_width="fill_parent">
+
+                        <TextView
+                            android:background="@drawable/boder_xs_gray"
+                            style="@style/MyTextXS.Center"
+                            android:layout_weight="1"
+                            android:text="36770" />
+
+                        <TextView
+                            android:background="@drawable/boder_xs_gray"
+                            style="@style/MyTextXS.Center"
+                            android:layout_weight="1"
+                            android:text="36770" />
+
+                        <TextView
+                            android:background="@drawable/boder_xs_gray"
+                            style="@style/MyTextXS.Center"
+                            android:layout_weight="1"
+                            android:text="36770" />
+
+                        <TextView
+                            android:background="@drawable/boder_xs_gray"
+                            style="@style/MyTextXS.Center"
+                            android:layout_weight="1"
+                            android:text="36770" />
+
+                    </TableRow>
+                </TableLayout>
             </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    style="@style/MyText"
-                    android:text="6" />
-
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đuôi" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    style="@style/MyText"
-                    android:text="7" />
-
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đuôi" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    style="@style/MyText"
-                    android:text="8" />
-
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đuôi" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    style="@style/MyText"
-                    android:text="9" />
-
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đuôi" />
-            </TableRow>
-
         </TableLayout>
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:shrinkColumns="*"
-            android:stretchColumns="*">
+            android:layout_height="fill_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
 
-            <TableRow>
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:shrinkColumns="*"
+                android:stretchColumns="*">
 
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đầu" />
+                <TableRow>
 
-                <TextView
-                    style="@style/MyText"
-                    android:text="Đuôi" />
-            </TableRow>
-            <TableRow>
+                    <TextView
+                        style="@style/MyText.Head"
+                        android:text="Đầu" />
 
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đầu" />
+                    <TextView
+                        style="@style/MyText.Right.Head"
+                        android:text="Đuôi" />
+                </TableRow>
 
-                <TextView
-                    style="@style/MyText"
-                    android:text="0" />
-            </TableRow>
+                <TableRow>
 
-            <TableRow>
+                    <TextView
+                        style="@style/MyText"
+                        android:text="0" />
 
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đầu" />
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đuôi" />
+                </TableRow>
 
-                <TextView
-                    style="@style/MyText"
-                    android:text="1" />
-            </TableRow>
+                <TableRow>
 
-            <TableRow>
+                    <TextView
+                        style="@style/MyText"
+                        android:text="1" />
 
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đầu" />
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đuôi" />
+                </TableRow>
 
-                <TextView
-                    style="@style/MyText"
-                    android:text="2" />
-            </TableRow>
+                <TableRow>
 
-            <TableRow>
+                    <TextView
+                        style="@style/MyText"
+                        android:text="2" />
 
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đầu" />
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đuôi" />
+                </TableRow>
 
-                <TextView
-                    style="@style/MyText"
-                    android:text="3" />
-            </TableRow>
+                <TableRow>
 
-            <TableRow>
+                    <TextView
+                        style="@style/MyText"
+                        android:text="3" />
 
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đầu" />
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đuôi" />
+                </TableRow>
 
-                <TextView
-                    style="@style/MyText"
-                    android:text="4" />
-            </TableRow>
+                <TableRow>
 
-            <TableRow>
+                    <TextView
+                        style="@style/MyText"
+                        android:text="4" />
 
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đầu" />
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đuôi" />
+                </TableRow>
 
-                <TextView
-                    style="@style/MyText"
-                    android:text="5" />
-            </TableRow>
+                <TableRow>
 
-            <TableRow>
+                    <TextView
+                        style="@style/MyText"
+                        android:text="5" />
 
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đầu" />
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đuôi" />
+                </TableRow>
 
-                <TextView
-                    style="@style/MyText"
-                    android:text="6" />
-            </TableRow>
+                <TableRow>
 
-            <TableRow>
+                    <TextView
+                        style="@style/MyText"
+                        android:text="6" />
 
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đầu" />
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đuôi" />
+                </TableRow>
 
-                <TextView
-                    style="@style/MyText"
-                    android:text="7" />
-            </TableRow>
+                <TableRow>
 
-            <TableRow>
+                    <TextView
+                        style="@style/MyText"
+                        android:text="7" />
 
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="7" />
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đuôi" />
+                </TableRow>
 
-                <TextView
-                    style="@style/MyText"
-                    android:text="8" />
-            </TableRow>
+                <TableRow>
 
-            <TableRow>
+                    <TextView
+                        style="@style/MyText"
+                        android:text="8" />
 
-                <TextView
-                    style="@style/MyText.Right"
-                    android:text="Đầu" />
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đuôi" />
+                </TableRow>
 
-                <TextView
-                    style="@style/MyText"
-                    android:text="9" />
-            </TableRow>
-        </TableLayout>
+                <TableRow>
 
+                    <TextView
+                        style="@style/MyText"
+                        android:text="9" />
+
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đuôi" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:shrinkColumns="*"
+                android:stretchColumns="*">
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MyText.Right.Head"
+                        android:text="Đầu" />
+
+                    <TextView
+                        style="@style/MyText.Head"
+                        android:text="Đuôi" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đầu" />
+
+                    <TextView
+                        style="@style/MyText"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đầu" />
+
+                    <TextView
+                        style="@style/MyText"
+                        android:text="1" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đầu" />
+
+                    <TextView
+                        style="@style/MyText"
+                        android:text="2" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đầu" />
+
+                    <TextView
+                        style="@style/MyText"
+                        android:text="3" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đầu" />
+
+                    <TextView
+                        style="@style/MyText"
+                        android:text="4" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đầu" />
+
+                    <TextView
+                        style="@style/MyText"
+                        android:text="5" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đầu" />
+
+                    <TextView
+                        style="@style/MyText"
+                        android:text="6" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đầu" />
+
+                    <TextView
+                        style="@style/MyText"
+                        android:text="7" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="7" />
+
+                    <TextView
+                        style="@style/MyText"
+                        android:text="8" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/MyText.Right"
+                        android:text="Đầu" />
+
+                    <TextView
+                        style="@style/MyText"
+                        android:text="9" />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
     </LinearLayout>
 
-
-</LinearLayout>
+</ScrollView>
