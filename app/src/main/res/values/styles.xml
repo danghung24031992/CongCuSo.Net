@@ -12,6 +12,7 @@
         <item name="colorAccent">@color/colorBacground</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:windowBackground">@color/windowBackground</item>
+
     </style>
 
     <style name="MyText">

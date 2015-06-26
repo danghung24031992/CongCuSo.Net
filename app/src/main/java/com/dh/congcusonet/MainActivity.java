@@ -1,5 +1,6 @@
 package com.dh.congcusonet;
 
+import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -10,23 +11,27 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 
-public class MainActivity extends ActionBarActivity implements FragmentDrawer.FragmentDrawerListener {
+public class MainActivity extends ActionBarActivity implements FragmentDrawer.FragmentDrawerListener, View.OnClickListener {
 
     private static String TAG = MainActivity.class.getSimpleName();
 
     private Toolbar mToolbar;
     private FragmentDrawer drawerFragment;
+    private LinearLayout btn_nav_mb;
+    private LinearLayout btn_nav_mt;
+    private LinearLayout btn_nav_mn;
+    private LinearLayout btn_nav_sl;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-
+        init();
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -37,6 +42,19 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
 
         // display the first navigation drawer view on app launch
         displayView(0);
+    }
+
+    private void init() {
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        btn_nav_mb = (LinearLayout) findViewById(R.id.btn_nav_mb);
+        btn_nav_mt = (LinearLayout) findViewById(R.id.btn_nav_mt);
+        btn_nav_mn = (LinearLayout) findViewById(R.id.btn_nav_mn);
+        btn_nav_sl = (LinearLayout) findViewById(R.id.btn_nav_sl);
+
+        btn_nav_mb.setOnClickListener(this);
+        btn_nav_mt.setOnClickListener(this);
+        btn_nav_mn.setOnClickListener(this);
+        btn_nav_sl.setOnClickListener(this);
     }
 
 
@@ -116,6 +134,26 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
 
             // set the toolbar title
             getSupportActionBar().setTitle(title);
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_nav_mb:
+                displayView(0);
+                break;
+            case R.id.btn_nav_mt:
+                displayView(1);
+                break;
+            case R.id.btn_nav_mn:
+                displayView(2);
+                break;
+            case R.id.btn_nav_sl:
+                displayView(3);
+                break;
+            default:
+                break;
         }
     }
 }
