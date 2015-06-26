@@ -4,28 +4,121 @@ package com.dh.congcusonet;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.dh.congcusonet.database.Constant;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
 
 
 public class XSMBFragment extends Fragment {
-
-    public XSMBFragment() {
-        // Required empty public constructor
-    }
+    private XSBean xsBean;
+    private static String TAG = XSMBFragment.class.getSimpleName();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        makeJsonObjectRequest();
+    }
 
+    private void makeJsonObjectRequest() {
+        String urlJsonObj = "http://congcuso.net/Service1.svc/json/getketqua/2015-06-22";
+
+        // Post params to be sent to the server
+        HashMap<String, String> params = new HashMap<>();
+        params.put("token", "AbCdEfGh123456");
+
+        JsonObjectRequest request = new JsonObjectRequest(urlJsonObj, new JSONObject(params),
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        handlerRespone(response);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        VolleyLog.d("ERROR:", error.getMessage());
+                    }
+                }
+        );
+        AppController.getInstance().getRequestQueue().add(request);
+    }
+
+    private void handlerRespone(JSONObject response) {
+        xsBean = new XSBean();
+        try {
+            Log.d("AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
+            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
+            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
+            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
+            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
+            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
+            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
+            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
+            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
+            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
+            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
+            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
+            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
+            xsBean.setKETQUAID(response.getInt(Constant.TAG_KETQUAID));
+            xsBean.setGDB(response.getString(Constant.TAG_GDB));
+            xsBean.setGNHAT(response.getString(Constant.TAG_GNHAT));
+            xsBean.setGHAI1(response.getString(Constant.TAG_GHAI1));
+            xsBean.setGHAI2(response.getString(Constant.TAG_GHAI2));
+            xsBean.setGBA1(response.getString(Constant.TAG_GBA1));
+            xsBean.setGBA2(response.getString(Constant.TAG_GBA2));
+            xsBean.setGBA3(response.getString(Constant.TAG_GBA3));
+            xsBean.setGBA4(response.getString(Constant.TAG_GBA4));
+            xsBean.setGBA5(response.getString(Constant.TAG_GBA5));
+            xsBean.setGBA6(response.getString(Constant.TAG_GBA6));
+            xsBean.setGBON1(response.getString(Constant.TAG_GBON1));
+            xsBean.setGBON2(response.getString(Constant.TAG_GBON2));
+            xsBean.setGBON3(response.getString(Constant.TAG_GBON3));
+            xsBean.setGBON4(response.getString(Constant.TAG_GBON4));
+            xsBean.setGNAM1(response.getString(Constant.TAG_GNAM1));
+            xsBean.setGNAM2(response.getString(Constant.TAG_GNAM2));
+            xsBean.setGNAM3(response.getString(Constant.TAG_GNAM3));
+            xsBean.setGNAM4(response.getString(Constant.TAG_GNAM4));
+            xsBean.setGNAM5(response.getString(Constant.TAG_GNAM5));
+            xsBean.setGNAM6(response.getString(Constant.TAG_GNAM6));
+            xsBean.setGSAU1(response.getString(Constant.TAG_GSAU1));
+            xsBean.setGSAU2(response.getString(Constant.TAG_GSAU2));
+            xsBean.setGSAU3(response.getString(Constant.TAG_GSAU3));
+            xsBean.setGBAY1(response.getString(Constant.TAG_GBAY1));
+            xsBean.setGBAY2(response.getString(Constant.TAG_GBAY2));
+            xsBean.setGBAY3(response.getString(Constant.TAG_GBAY3));
+            xsBean.setGBAY4(response.getString(Constant.TAG_GBAY4));
+            xsBean.setKQLODAU(response.getString(Constant.TAG_KQLODAU));
+            xsBean.setKQLOCUOI(response.getString(Constant.TAG_KQLOCUOI));
+            xsBean.setCHUOISO(response.getString(Constant.TAG_CHUOISO));
+            xsBean.setDATECREATE(response.getString(Constant.TAG_DATECREATE));
+
+
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_xsmb, container, false);
-
 
         // Inflate the layout for this fragment
         return rootView;

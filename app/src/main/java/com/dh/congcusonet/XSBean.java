@@ -7,8 +7,7 @@ import java.util.Date;
  */
 public class XSBean {
     private int KETQUAID;
-    private Date DATECREATE;
-
+    private String DATECREATE;
     private String GDB;
     private String GNHAT;
     private String GHAI1;
@@ -43,7 +42,7 @@ public class XSBean {
     public XSBean() {
     }
 
-    public XSBean(int KETQUAID, Date DATECREATE, String GDB, String GNHAT, String GHAI1, String GHAI2, String GBA1, String GBA2, String GBA3, String GBA4, String GBA5, String GBA6, String GBON1, String GBON2, String GBON3, String GBON4, String GNAM1, String GNAM2, String GNAM3, String GNAM4, String GNAM5, String GNAM6, String GSAU1, String GSAU2, String GSAU3, String GBAY1, String GBAY2, String GBAY3, String GBAY4, String KQLOCUOI, String KQLODAU, String CHUOISO) {
+    public XSBean(int KETQUAID, String DATECREATE, String GDB, String GNHAT, String GHAI1, String GHAI2, String GBA1, String GBA2, String GBA3, String GBA4, String GBA5, String GBA6, String GBON1, String GBON2, String GBON3, String GBON4, String GNAM1, String GNAM2, String GNAM3, String GNAM4, String GNAM5, String GNAM6, String GSAU1, String GSAU2, String GSAU3, String GBAY1, String GBAY2, String GBAY3, String GBAY4, String KQLOCUOI, String KQLODAU, String CHUOISO) {
         this.KETQUAID = KETQUAID;
         this.DATECREATE = DATECREATE;
         this.GDB = GDB;
@@ -86,11 +85,11 @@ public class XSBean {
         this.KETQUAID = KETQUAID;
     }
 
-    public Date getDATECREATE() {
+    public String getDATECREATE() {
         return DATECREATE;
     }
 
-    public void setDATECREATE(Date DATECREATE) {
+    public void setDATECREATE(String DATECREATE) {
         this.DATECREATE = DATECREATE;
     }
 
