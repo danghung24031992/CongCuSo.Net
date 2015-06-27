@@ -130,8 +130,10 @@ public class XSMBFragment extends Fragment {
 
 //        Calendar c = Calendar.getInstance();
         String formattedDate = new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime());
+        String formattedTime = new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime());
 
-        Log.d("FFFFFFFFFFFFFFFFFFFFF", formattedDate);
+        Log.d("DDDDDDDDDDDDDDDDDDDDD", formattedDate);
+        Log.d("TTTTTTTTTTTTTTTTTTTTT", formattedTime);
 
     }
 
