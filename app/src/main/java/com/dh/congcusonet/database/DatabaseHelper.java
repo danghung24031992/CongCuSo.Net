@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import com.dh.congcusonet.XSBean;
 
@@ -20,9 +21,13 @@ public class DatabaseHelper {
     private static final String TABLE_NAME = "xsmb";
     private SQLiteDatabase database;
     private Context mContext;
+    private OpenHelper helper;
+
+    private XSBean xsBean;
+
     public DatabaseHelper(Context context) {
         this.mContext = context;
-        OpenHelper helper = new OpenHelper(mContext);
+        helper = new OpenHelper(mContext);
         database = helper.getWritableDatabase();
     }
 
@@ -76,6 +81,7 @@ public class DatabaseHelper {
         @Override
         public synchronized void close() {
             super.close();
+            database.close();
         }
     }
     public void insertData(XSBean xsBean) {
@@ -110,17 +116,16 @@ public class DatabaseHelper {
         values.put(Constant.TAG_KQLOCUOI, xsBean.getKQLOCUOI());
         values.put(Constant.TAG_DATECREATE, xsBean.getDATECREATE());
         database.insertOrThrow(TABLE_NAME, null, values);
-
     }
 
-    // Getting single contact
-    public XSBean getData(int id) {
-        String query = "SELECT * FROM " + TABLE_NAME + " WHERE " + Constant.TAG_KETQUAID + " = " + id;
+    public XSBean getData(String date) {
+        String query = "SELECT * FROM " + TABLE_NAME + " WHERE " + Constant.TAG_DATECREATE + " = '" +date+ "'";
         Cursor cursor = database.rawQuery(query, null);
-
         if (cursor != null) {
             if (cursor.moveToFirst()) {
-                XSBean xsBean = new XSBean();
+                xsBean = new XSBean();
+
+                xsBean.setKETQUAID(Integer.parseInt(cursor.getString(0)));
                 xsBean.setGDB(cursor.getString(1));
                 xsBean.setGNHAT(cursor.getString(2));
                 xsBean.setGHAI1(cursor.getString(3));
@@ -148,25 +153,20 @@ public class DatabaseHelper {
                 xsBean.setGBAY2(cursor.getString(25));
                 xsBean.setGBAY3(cursor.getString(26));
                 xsBean.setGBAY4(cursor.getString(27));
-                //xsBean.setKQLODAU(cursor.getString(28));
-                xsBean.setKQLOCUOI(cursor.getString(29));
-                //xsBean.setCHUOISO(cursor.getString(30));
-
-                return xsBean;
+                xsBean.setKQLOCUOI(cursor.getString(28));
+                xsBean.setDATECREATE(cursor.getString(29));
             }
         }
-        return null;
+        return xsBean;
     }
 
-    // Getting All Contacts
     public ArrayList<XSBean> getAllData() {
         ArrayList<XSBean> list = new ArrayList<>();
         String query = "SELECT * FROM " + TABLE_NAME + " LIMIT 10";
         Cursor cursor = database.rawQuery(query, null);
-
         if (cursor != null) {
             if (cursor.moveToFirst()) {
-                while (cursor.moveToNext()) {
+                do {
                     XSBean xsBean = new XSBean();
                     xsBean.setKETQUAID(Integer.parseInt(cursor.getString(0)));
                     xsBean.setGDB(cursor.getString(1));
@@ -196,24 +196,22 @@ public class DatabaseHelper {
                     xsBean.setGBAY2(cursor.getString(25));
                     xsBean.setGBAY3(cursor.getString(26));
                     xsBean.setGBAY4(cursor.getString(27));
-                    //xsBean.setKQLODAU(cursor.getString(28));
-                    xsBean.setKQLOCUOI(cursor.getString(29));
-                    //xsBean.setCHUOISO(cursor.getString(30));
+                    xsBean.setKQLOCUOI(cursor.getString(28));
+                    xsBean.setDATECREATE(cursor.getString(29));
                     list.add(xsBean);
-                }
+                }while (cursor.moveToNext());
             }
         }
         return list;
     }
 
-    // Getting contacts Count
     public int getCount() {
         String countQuery = "SELECT  * FROM " + TABLE_NAME ;
         Cursor cursor = database.rawQuery(countQuery, null);
-        return cursor.getCount();
+        int count = cursor.getCount();
+        return count;
     }
 
-    // Updating single contact
     public int updateData(XSBean xsBean) {
         ContentValues values = new ContentValues();
         values.put(Constant.TAG_GDB, xsBean.getGDB());
@@ -243,15 +241,12 @@ public class DatabaseHelper {
         values.put(Constant.TAG_GBAY2, xsBean.getGBAY2());
         values.put(Constant.TAG_GBAY3, xsBean.getGBAY3());
         values.put(Constant.TAG_GBAY4, xsBean.getGBAY4());
-//        values.put(Constant.TAG_KETQUAID, xsBean.getKETQUAID());
-        values.put(Constant.TAG_KQLODAU, xsBean.getKQLODAU());
         values.put(Constant.TAG_KQLOCUOI, xsBean.getKQLOCUOI());
         values.put(Constant.TAG_DATECREATE, xsBean.getDATECREATE());
         return database.update(TABLE_NAME, values, Constant.TAG_KETQUAID + " = ?",
                 new String[]{String.valueOf(xsBean.getKETQUAID())});
     }
 
-    // Deleting single contact
     public void delete(XSBean xsBean) {
         database.delete(TABLE_NAME, Constant.TAG_KETQUAID + " = ?",
                 new String[]{String.valueOf(xsBean.getKETQUAID())});

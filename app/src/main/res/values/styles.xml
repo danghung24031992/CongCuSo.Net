@@ -49,6 +49,7 @@
     <style name="MyTextXS.Center">
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/abc_primary_text_disable_only_material_light</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>

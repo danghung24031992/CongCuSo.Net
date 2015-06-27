@@ -1,6 +1,7 @@
 package com.dh.congcusonet;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -142,6 +143,7 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container_body, fragment);
+            //fragmentTransaction.addToBackStack(TAG);
             fragmentTransaction.commit();
 
             // set the toolbar title
@@ -168,4 +170,31 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
                 break;
         }
     }
+
+    private Boolean exit = false;
+
+    @Override
+    public void onBackPressed() {
+//        FragmentManager manager = getSupportFragmentManager();
+//        if (manager.getBackStackEntryCount() > 0) {
+//            manager.popBackStack();
+//        } else {
+//            super.onBackPressed();
+        if (exit) {
+            finish(); // finish activity
+        } else {
+            Toast.makeText(this, "Press Back again to Exit.",
+                    Toast.LENGTH_SHORT).show();
+            exit = true;
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    exit = false;
+                }
+            }, 3 * 1000);
+
+        }
+//        }
+    }
+
 }
