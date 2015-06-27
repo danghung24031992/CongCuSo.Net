@@ -1,5 +1,10 @@
 package com.dh.congcusonet.database;
 
+import android.app.Activity;
+import android.content.Context;
+
+import com.gc.materialdesign.widgets.ProgressDialog;
+
 /**
  * Created by DH on 6/27/2015.
  */
@@ -36,4 +41,18 @@ public class Constant {
     public static final String TAG_KQLODAU = "KQLODAU";
     public static final String TAG_CHUOISO = "CHUOISO";
     public static final String TAG_DATECREATE = "DATECREATE";
+
+
+    public static ProgressDialog pDialog;
+
+    public static void showDialog(){
+        if (!pDialog.isShowing())
+            pDialog.show();
+    }
+
+    public static void hideDialog() {
+        if (pDialog.isShowing())
+            pDialog.dismiss();
+    }
+
 }

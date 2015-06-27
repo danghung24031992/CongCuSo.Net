@@ -1,13 +1,10 @@
 package com.dh.congcusonet;
 
-import java.util.Date;
-
 /**
  * Created by DH on 6/26/2015.
  */
 public class XSBean {
     private int KETQUAID;
-    private String DATECREATE;
     private String GDB;
     private String GNHAT;
     private String GHAI1;
@@ -35,16 +32,16 @@ public class XSBean {
     private String GBAY2;
     private String GBAY3;
     private String GBAY4;
-    private String KQLOCUOI;
     private String KQLODAU;
+    private String KQLOCUOI;
     private String CHUOISO;
+    private String DATECREATE;
 
     public XSBean() {
     }
 
-    public XSBean(int KETQUAID, String DATECREATE, String GDB, String GNHAT, String GHAI1, String GHAI2, String GBA1, String GBA2, String GBA3, String GBA4, String GBA5, String GBA6, String GBON1, String GBON2, String GBON3, String GBON4, String GNAM1, String GNAM2, String GNAM3, String GNAM4, String GNAM5, String GNAM6, String GSAU1, String GSAU2, String GSAU3, String GBAY1, String GBAY2, String GBAY3, String GBAY4, String KQLOCUOI, String KQLODAU, String CHUOISO) {
+    public XSBean(int KETQUAID, String GDB, String GNHAT, String GHAI1, String GHAI2, String GBA1, String GBA2, String GBA3, String GBA4, String GBA5, String GBA6, String GBON1, String GBON2, String GBON3, String GBON4, String GNAM1, String GNAM2, String GNAM3, String GNAM4, String GNAM5, String GNAM6, String GSAU1, String GSAU2, String GSAU3, String GBAY1, String GBAY2, String GBAY3, String GBAY4,  String KQLODAU, String KQLOCUOI, String CHUOISO, String DATECREATE) {
         this.KETQUAID = KETQUAID;
-        this.DATECREATE = DATECREATE;
         this.GDB = GDB;
         this.GNHAT = GNHAT;
         this.GHAI1 = GHAI1;
@@ -72,9 +69,44 @@ public class XSBean {
         this.GBAY2 = GBAY2;
         this.GBAY3 = GBAY3;
         this.GBAY4 = GBAY4;
-        this.KQLOCUOI = KQLOCUOI;
         this.KQLODAU = KQLODAU;
+        this.KQLOCUOI = KQLOCUOI;
         this.CHUOISO = CHUOISO;
+        this.DATECREATE = DATECREATE;
+    }
+
+    public XSBean(String GDB, String GNHAT, String GHAI1, String GHAI2, String GBA1, String GBA2, String GBA3, String GBA4, String GBA5, String GBA6, String GBON1, String GBON2, String GBON3, String GBON4, String GNAM1, String GNAM2, String GNAM3, String GNAM4, String GNAM5, String GNAM6, String GSAU1, String GSAU2, String GSAU3, String GBAY1, String GBAY2, String GBAY3, String GBAY4, String KQLODAU, String KQLOCUOI, String CHUOISO, String DATECREATE) {
+        this.GDB = GDB;
+        this.GNHAT = GNHAT;
+        this.GHAI1 = GHAI1;
+        this.GHAI2 = GHAI2;
+        this.GBA1 = GBA1;
+        this.GBA2 = GBA2;
+        this.GBA3 = GBA3;
+        this.GBA4 = GBA4;
+        this.GBA5 = GBA5;
+        this.GBA6 = GBA6;
+        this.GBON1 = GBON1;
+        this.GBON2 = GBON2;
+        this.GBON3 = GBON3;
+        this.GBON4 = GBON4;
+        this.GNAM1 = GNAM1;
+        this.GNAM2 = GNAM2;
+        this.GNAM3 = GNAM3;
+        this.GNAM4 = GNAM4;
+        this.GNAM5 = GNAM5;
+        this.GNAM6 = GNAM6;
+        this.GSAU1 = GSAU1;
+        this.GSAU2 = GSAU2;
+        this.GSAU3 = GSAU3;
+        this.GBAY1 = GBAY1;
+        this.GBAY2 = GBAY2;
+        this.GBAY3 = GBAY3;
+        this.GBAY4 = GBAY4;
+        this.KQLODAU = KQLODAU;
+        this.KQLOCUOI = KQLOCUOI;
+        this.CHUOISO = CHUOISO;
+        this.DATECREATE = DATECREATE;
     }
 
     public int getKETQUAID() {

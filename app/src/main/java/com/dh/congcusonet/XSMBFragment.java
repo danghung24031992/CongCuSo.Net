@@ -8,34 +8,41 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
-import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.dh.congcusonet.database.Constant;
+import com.dh.congcusonet.database.DatabaseHelper;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 
 
 public class XSMBFragment extends Fragment {
     private XSBean xsBean;
+    private DatabaseHelper helper;
+    private ArrayList<XSBean> xsBeanArrayList;
     private static String TAG = XSMBFragment.class.getSimpleName();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         makeJsonObjectRequest();
+
+        helper = new DatabaseHelper(getActivity());
     }
 
     private void makeJsonObjectRequest() {
         String urlJsonObj = "http://congcuso.net/Service1.svc/json/getketqua/2015-06-22";
-
         // Post params to be sent to the server
         HashMap<String, String> params = new HashMap<>();
         params.put("token", "AbCdEfGh123456");
@@ -60,21 +67,6 @@ public class XSMBFragment extends Fragment {
     private void handlerRespone(JSONObject response) {
         xsBean = new XSBean();
         try {
-            Log.d("AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
-            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
-            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
-            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
-            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
-            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
-            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
-            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
-            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
-            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
-            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
-            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
-            Log.d("AAAAAAAAAAAAAAAAAAA", response.getString(Constant.TAG_GBA3));
-            xsBean.setKETQUAID(response.getInt(Constant.TAG_KETQUAID));
             xsBean.setGDB(response.getString(Constant.TAG_GDB));
             xsBean.setGNHAT(response.getString(Constant.TAG_GNHAT));
             xsBean.setGHAI1(response.getString(Constant.TAG_GHAI1));
@@ -102,17 +94,45 @@ public class XSMBFragment extends Fragment {
             xsBean.setGBAY2(response.getString(Constant.TAG_GBAY2));
             xsBean.setGBAY3(response.getString(Constant.TAG_GBAY3));
             xsBean.setGBAY4(response.getString(Constant.TAG_GBAY4));
-            xsBean.setKQLODAU(response.getString(Constant.TAG_KQLODAU));
             xsBean.setKQLOCUOI(response.getString(Constant.TAG_KQLOCUOI));
-            xsBean.setCHUOISO(response.getString(Constant.TAG_CHUOISO));
             xsBean.setDATECREATE(response.getString(Constant.TAG_DATECREATE));
 
-
-
-
+            //helper.insertData(xsBean);
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+        xsBeanArrayList = new ArrayList<>();
+
+        xsBeanArrayList = helper.getAllData();
+        int count = 0;
+        for (XSBean bean : xsBeanArrayList) {
+            if(xsBean.getDATECREATE().equalsIgnoreCase(bean.getDATECREATE())){
+            }
+        }
+        //helper.insertData(xsBean);
+
+        Log.d("EEEEEEEEEEEEEEEE",helper.getCount()+"");
+        Log.d("EEEEEEEEEEEEEEEE",helper.getCount()+"");
+        Log.d("EEEEEEEEEEEEEEEE",helper.getCount()+"");
+        Log.d("EEEEEEEEEEEEEEEE",helper.getCount()+"");
+        Log.d("EEEEEEEEEEEEEEEE",helper.getCount()+"");
+        Log.d("EEEEEEEEEEEEEEEE",helper.getCount()+"");
+        Log.d("EEEEEEEEEEEEEEEE",helper.getCount()+"");
+        Log.d("EEEEEEEEEEEEEEEE",helper.getCount()+"");
+        Log.d("EEEEEEEEEEEEEEEE",helper.getCount()+"");
+        Log.d("EEEEEEEEEEEEEEEE",helper.getCount()+"");
+        Log.d("EEEEEEEEEEEEEEEE",helper.getCount()+"");
+        Log.d("EEEEEEEEEEEEEEEE",helper.getCount()+"");
+        Log.d("EEEEEEEEEEEEEEEE",helper.getCount()+"");
+        Log.d("EEEEEEEEEEEEEEEE",helper.getCount()+"");
+        Log.d("EEEEEEEEEEEEEEEE", helper.getCount() + "");
+
+//        Calendar c = Calendar.getInstance();
+        String formattedDate = new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime());
+
+        Log.d("FFFFFFFFFFFFFFFFFFFFF", formattedDate);
+
     }
 
     @Override
